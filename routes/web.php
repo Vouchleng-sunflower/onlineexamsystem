@@ -8,5 +8,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register')->name('register');
 });
-
+Route::get('/dashboard', function () {
+    return view('User.dashboard')->name('dashboard');
+});
 
