@@ -1,14 +1,14 @@
 <?php
+// filepath: app/Http/Controllers/RegisterController.php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class RegisterController extends Controller
 {
-    public function Register()
+    public function showRegistrationForm()
     {
-        return view('register');
+        return view('auth.register');
     }
 }
-
