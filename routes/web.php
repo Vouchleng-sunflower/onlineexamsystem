@@ -12,3 +12,5 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
+hi
+
