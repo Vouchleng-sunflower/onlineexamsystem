@@ -12,3 +12,5 @@ Route::get('/dashboard', function () {
     return view('User.dashboard')->name('dashboard');
 });
 
+hi
+
