@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/login', function () {
@@ -12,5 +13,5 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-hi
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 

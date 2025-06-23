@@ -1,17 +1,11 @@
 @extends('layout.app')
 @section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Management - Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg,rgb(211, 213, 222));
+            min-height: 100vh;
             min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -19,7 +13,7 @@
         .auth-container {
             max-width: 450px;
             margin: 50px auto;
-            background: rgba(255, 255, 255, 0.95);
+            background: linear-gradient(135deg,rgb(247, 247, 249) 0%);
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
@@ -27,7 +21,7 @@
         }
         
         .auth-header {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            background: linear-gradient(135deg,rgb(247, 247, 249) 0%);
             color: white;
             padding: 30px;
             text-align: center;
@@ -115,23 +109,21 @@
     <div class="container">
         <div class="auth-container">
             <div class="auth-header">
-                <div class="school-icon">
-                    <i class="fas fa-user-plus"></i>
-                </div>
-                <h2>Create Account</h2>
-                <p>Join our school management system</p>
+            
+                <img src="{{ asset('/img/big-logo.png') }}" alt="School Logo" class="school-logo">
+               
             </div>
             
             <div class="auth-body">
                 <form id="registerForm">
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <select class="form-select" id="registerRole" required>
                             <option value="">Select your role</option>
                             <option value="teacher">Teacher</option>
                             <option value="student">Student</option>
                             <option value="parent">Parent</option>
                         </select>
-                    </div>
+                    </div> -->
                     
                     <div class="row">
 
@@ -193,7 +185,7 @@
                 
                 <div class="toggle-form">
                     <p class="text-muted">Already have an account? 
-                        <a href="login.html" class="toggle-link">Sign In</a>
+                        <a href="{{ route('login') }}" class="toggle-link">Sign In</a>
                     </p>
                 </div>
             </div>
@@ -244,7 +236,7 @@
         });
     </script>
 </body>
-</html>
+
 
 
 @endsection

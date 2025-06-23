@@ -1,17 +1,9 @@
 @extends('layout.app')
 @section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Management - Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg,rgb(211, 213, 222));
             min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -19,18 +11,21 @@
         .auth-container {
             max-width: 400px;
             margin: 50px auto;
-            background: rgba(243, 237, 237, 0.95);
-            border-radius: 20px;
+            background:linear-gradient(135deg,rgb(247, 247, 249) 0%);
+            border-radius: 20px ;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             overflow: hidden;
+            
         }
         
         .auth-header {
-            background: linear-gradient(135deg,rgb(247, 247, 249) 0%,rgb(235, 233, 237) 100%);
+           background: linear-gradient(135deg,rgb(247, 247, 249) 0%);
             color: white;
-            padding: 30px;
+            padding: 20px 0px ;
             text-align: center;
+           
+            
         }
         
         .auth-header h2 {
@@ -38,12 +33,7 @@
             font-weight: 600;
             font-size: 1.8rem;
         }
-        
-        .auth-header p {
-            margin: 5px 0 0 0;
-            opacity: 0.9;
-            font-size: 0.9rem;
-        }
+
         
         .school-icon {
             font-size: 3rem;
@@ -53,6 +43,7 @@
         
         .auth-body {
             padding: 40px 30px;
+           
         }
         
         .form-floating {
@@ -121,7 +112,7 @@
             
             <div class="auth-body">
                 <form id="loginForm">
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <select class="form-select" id="loginRole" required>
                             <option value="">Select your role</option>
                             <option value="admin">Administrator</option>
@@ -129,7 +120,7 @@
                             <option value="student">Student</option>
                             <option value="parent">Parent</option>
                         </select>
-                    </div>
+                    </div> -->
 
                     
                     <div class="form-floating">
@@ -167,29 +158,7 @@
         </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPassword').value;
-            const role = document.getElementById('loginRole').value;
-            const submitBtn = this.querySelector('button[type="submit"]');
-            
-            submitBtn.innerHTML = '<i class="fas fa-sign-in-alt me-2"></i>Signing In...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                if (email && password && role) {
-                    alert('Login successful! Welcome to School Management System.\nRole: ' + role.charAt(0).toUpperCase() + role.slice(1) + '\nEmail: ' + email);
-                }
-                
-                submitBtn.innerHTML = '<i class="fas fa-sign-in-alt me-2"></i>Sign In';
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-    </script>
+
 </body>
 </html>
 
