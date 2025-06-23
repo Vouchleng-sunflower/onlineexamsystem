@@ -77,7 +77,7 @@
                         <input type="password" class="form-control" id="password" placeholder="Password">
                            <div class="justify-content: space-between">
                         <a href="#" class="m-4  mx-3 ">Forgot Password</a>
-                        <a href="{{ route('register') }}" class="m-4 p-4 mx-6"  >Sign Up</a>
+                        <a href="#" class="m-4 p-4 mx-6" >Sign Up</a>
                     </div>  
                     </div>
                  
