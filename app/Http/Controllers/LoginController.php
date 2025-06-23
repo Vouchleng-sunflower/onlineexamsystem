@@ -10,4 +10,10 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
+    public function isAdmin(){
+        return redirect ('Admin.dashforAdmin');
+    }
+    public function isUser(){
+        return redirect ('User.dashforUser');
+    }
 }
