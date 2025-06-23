@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('phone', 20)->nullable();
             $table->enum('gender', ['male', 'female', 'other'])->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->enum('role', ['student', 'teacher', 'admin'])->default('student');
-            $table->enum('status', ['active', 'inactive', 'banned'])->default('active');
+            $table->enum('role', ['student', 'admin'])->default('student');
+            $table->boolean('is_active')->default(true);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('profile_photo')->nullable();
             $table->rememberToken(); // Adds 'remember_token'
